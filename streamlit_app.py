@@ -1,9 +1,9 @@
-!pip install --upgrade pip
-!pip install farm-haystack
-!pip install opensearch-py
-!pip install requests-aws4auth
-!pip install tqdm
-!pip install streamlit
+pip install --upgrade pip
+pip install farm-haystack
+pip install opensearch-py
+pip install requests-aws4auth
+pip install tqdm
+pip install streamlit
 
 import logging
 
