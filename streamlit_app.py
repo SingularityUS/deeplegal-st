@@ -31,3 +31,15 @@ except:
 
 cur = conn.cursor()
 page = 1
+#####################################################################
+#######Openseaerch Connection#############################
+########################################3
+from haystack.document_stores import InMemoryDocumentStore
+from haystack.document_stores import OpenSearchDocumentStore
+from haystack.nodes import BM25Retriever
+from haystack.nodes import FARMReader
+from haystack.pipelines import ExtractiveQAPipeline
+
+document_store = OpenSearchDocumentStore(host= st.secrets["opensearch_address"], username= st.secrets["opensearch_username"], password= st.secrets["opensearch_password"], port=443) 
+retriever = BM25Retriever(document_store=document_store)
+reader = FARMReader(model_name_or_path="deepset/roberta-base-squad2", use_gpu=True)
