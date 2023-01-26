@@ -1,20 +1,16 @@
 
-import logging
-
-logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging.WARNING)
-logging.getLogger("haystack").setLevel(logging.INFO)
 
 #Gathering the PostgreSQL database
 import psycopg2
 import pandas as pd
 import numpy as np
-import requests
-import json
+#import requests
+#import json
 from bs4 import BeautifulSoup
 
 from haystack import document_stores
 import streamlit as st
-from copy import deepcopy
+#from copy import deepcopy
 
 #CONNECT to postgre DB
 
