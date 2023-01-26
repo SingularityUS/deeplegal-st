@@ -46,7 +46,7 @@ reader = FARMReader(model_name_or_path="deepset/roberta-base-squad2", use_gpu=Tr
 
 pipe = ExtractiveQAPipeline(reader, retriever)
 
- prompt_=st.text_area("Enter your query here",placeholder="""Q:What is the density of seawater?""")
+prompt_=st.text_area("Enter your query here",placeholder="""Q:What is the density of seawater?""")
 prediction = pipe.run(
     query=prompt_,
     params={
