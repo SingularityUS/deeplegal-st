@@ -4,7 +4,7 @@
 import psycopg2
 import pandas as pd
 import numpy as np
-#import requests
+import requests #for aws authenticaion
 #import json
 from bs4 import BeautifulSoup
 
