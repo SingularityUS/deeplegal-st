@@ -16,11 +16,11 @@ import streamlit as st
 
 try:
     # create connection and cursor
-    conn = psycopg2.connect(dbname=st.secrets[postgres_database],
-                            user=st.secrets[postgres_username],
-                            password=st.secrets[postgres_password], 
-                            host=st.secrets[postgres_address], 
-                            port=st.secrets[postgres_port], 
+    conn = psycopg2.connect(dbname=st.secrets["postgres_database"],
+                            user=st.secrets["postgres_username"],
+                            password=st.secrets["postgres_password"], 
+                            host=st.secrets["postgres_address"], 
+                            port=st.secrets["postgres_port"], 
                             sslmode='require')
     print('connected successfully')
     st.write('sucessfully contencted to case database')
