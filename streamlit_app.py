@@ -43,3 +43,24 @@ from haystack.pipelines import ExtractiveQAPipeline
 document_store = OpenSearchDocumentStore(host= st.secrets["opensearch_address"], username= st.secrets["opensearch_username"], password= st.secrets["opensearch_password"], port=443) 
 retriever = BM25Retriever(document_store=document_store)
 reader = FARMReader(model_name_or_path="deepset/roberta-base-squad2", use_gpu=True)
+
+pipe = ExtractiveQAPipeline(reader, retriever)
+
+ prompt_=st.text_area("Enter your query here",placeholder="""Q:What is the density of seawater?""")
+prediction = pipe.run(
+    query=prompt_,
+    params={
+        "Retriever": {"top_k": 10},
+        "Reader": {"top_k": 5}
+    }
+)
+
+st.write(prediction)
+from haystack.utils import print_answers
+
+query_output= print_answers(
+    prediction,
+    details="minimum" ## Choose from `minimum`, `medium`, and `all`
+)
+
+st.write(query_output)
