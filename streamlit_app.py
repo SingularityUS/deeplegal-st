@@ -57,10 +57,12 @@ prediction = pipe.run(
 
 st.write(prediction)
 from haystack.utils import print_answers
-
+'''
 query_output= print_answers(
     prediction,
     details="minimum" ## Choose from `minimum`, `medium`, and `all`
 )
 
 st.write(query_output)
+
+'''
