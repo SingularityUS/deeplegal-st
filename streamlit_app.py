@@ -56,7 +56,7 @@ prediction = pipe.run(
 )
 
 st.write(prediction)
-from haystack.utils import print_answers
+#from haystack.utils import print_answers
 '''
 query_output= print_answers(
     prediction,
