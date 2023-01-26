@@ -21,7 +21,7 @@ from copy import deepcopy
 try:
     # create connection and cursor
     conn = psycopg2.connect(dbname=st.secrets[postgres_database],
-                            user=st.secrets[postgres_port],
+                            user=st.secrets[postgres_username],
                             password=st.secrets[postgres_password], 
                             host=st.secrets[postgres_address], 
                             port=st.secrets[postgres_port], 
