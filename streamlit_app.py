@@ -47,15 +47,23 @@ reader = FARMReader(model_name_or_path="deepset/roberta-base-squad2", use_gpu=Tr
 pipe = ExtractiveQAPipeline(reader, retriever)
 
 prompt_=st.text_area("Enter your query here",placeholder="""Q:What is the density of seawater?""")
-prediction = pipe.run(
-    query=prompt_,
-    params={
-        "Retriever": {"top_k": 10},
-        "Reader": {"top_k": 5}
-    }
-)
+button= st.button("Generate")
+if button and prompt_:
+    user_prompt=prompt_
+   
+    with st.spinner("I am thinking. Please wait.."):
+           prediction = pipe.run(
+                query=prompt_,
+                params={
+                    "Retriever": {"top_k": 10},
+                    "Reader": {"top_k": 5}
+                }
+            )
 
-st.write(prediction)
+    st.write(prediction)
+
+        #st.write(response['choices'][0]['text']) 
+
 #from haystack.utils import print_answers
 '''
 query_output= print_answers(
