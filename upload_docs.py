@@ -76,6 +76,7 @@ def main():
     print(df)
     
 username = st.text_input("Enter your username: ")
+'''
 if uploaded_file:
     file_name = uploaded_file.name
     file_paths = [uploaded_file]
@@ -85,6 +86,6 @@ if uploaded_file:
     st.write("Document Name: ", df["Document Name"])
     st.write("Page Number: ", df["Page Number"])
     st.write("Username: ", df["Username"])
-
+'''
 if __name__ == '__main__':
     main()
