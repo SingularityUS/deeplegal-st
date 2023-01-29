@@ -55,8 +55,11 @@ def convert_to_dataframe(file_paths):
     return pd.DataFrame(rows, columns=["Text", "Document Name", "Page Number", "Username"])
 
 # Add a file uploader widget
-uploaded_file = st.file_uploader("Upload file", type=["pdf", "txt", "docx", "doc"])
-if uploaded_file:
+
+
+uploaded_file = st.file_uploader("Choose a file", type=["pdf", "docx", "txt"])
+
+if uploaded_file is not None:
     # Get the file name
     file_name = uploaded_file.name
     file_paths = [uploaded_file]
