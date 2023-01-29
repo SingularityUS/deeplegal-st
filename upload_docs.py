@@ -59,7 +59,7 @@ def convert_to_dataframe(file_paths):
 
 #uploaded_file = st.file_uploader("Choose a file", type=["pdf", "docx", "txt"])
 
-if uploaded_file:
+if uploaded_files:
     # Get the file name
     file_name = uploaded_file.name
     file_paths = [uploaded_file]
