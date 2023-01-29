@@ -57,7 +57,7 @@ def convert_to_dataframe(file_paths):
 # Add a file uploader widget
 
 
-uploaded_file = st.file_uploader("Choose a file", type=["pdf", "docx", "txt"])
+#uploaded_file = st.file_uploader("Choose a file", type=["pdf", "docx", "txt"])
 
 if uploaded_file is not None:
     # Get the file name
