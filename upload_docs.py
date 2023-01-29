@@ -70,7 +70,7 @@ if uploaded_file is not None:
     
     
 def main():
-    uploaded_files = files.upload()
+    uploaded_files = st.file_uploader("Choose a file", type=["pdf", "docx", "txt"])
     file_paths = list(uploaded_files.keys())
     df = convert_to_dataframe(file_paths)
     print(df)
