@@ -58,7 +58,7 @@ def convert_to_dataframe(file_paths):
 
 
 #uploaded_file = st.file_uploader("Choose a file", type=["pdf", "docx", "txt"])
-
+'''
 if uploaded_files:
     # Get the file name
     file_name = uploaded_file.name
@@ -67,7 +67,7 @@ if uploaded_files:
     st.write("Text: ", df["Text"])
     st.write("Document Name: ", df["Document Name"])
     st.write("Page Number: ", df["Page Number"])
-    
+'''    
     
 def main():
     uploaded_files = st.file_uploader("Choose a file", type=["pdf", "docx", "txt"])
