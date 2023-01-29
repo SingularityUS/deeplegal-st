@@ -1,6 +1,6 @@
 import pandas as pd
 import io
-from google.colab import files
+#from google.colab import files
 import PyPDF2
 import docx2txt
 import re
