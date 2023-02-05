@@ -1,4 +1,0 @@
-
-pandas 
-PyPDF2 
-docx2txt
